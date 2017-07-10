@@ -1,0 +1,21 @@
+﻿@*Calling my types so we get intellisense*@
+@model MyCoreApp.ViewModels.HomePageViewModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>myIndexPage</title>
+</head>
+<body>
+    <h1>Welcome to my Homepage!</h1>
+    <h3>@Model.CurentGreeting</h3>
+    <table>
+        @foreach (var resturaunt in Model.Restaurants)
+        {
+            <tr>
+                <td>@Html.ActionLink(resturaunt.Id.ToString(), "Details", new { id = resturaunt.Id })</td>
+                <td>@resturaunt.Name</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

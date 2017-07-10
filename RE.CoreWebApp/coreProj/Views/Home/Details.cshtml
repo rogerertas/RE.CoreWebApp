@@ -1,0 +1,15 @@
+﻿@*Calling my types so we get intellisense*@
+@using MyCoreApp.Entities
+@model Restaurant
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@Model.Name</title>
+</head>
+<body>
+    <h1>Name: @Model.Name</h1>
+    <div>ID: @Model.Id</div>
+    <div>Cuisine: @Model.Cuisine</div>
+    @Html.ActionLink("Home", "Index")
+</body>
+</html>
